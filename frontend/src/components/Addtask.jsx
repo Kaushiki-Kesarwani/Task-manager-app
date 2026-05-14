@@ -1,9 +1,9 @@
-
-import { useState } from 'react';
+import React from 'react'
+import { useState } from 'react'
 import API from '../services/api'
 
-const Taskpage = () => {
-    const [title, setTitle] = useState("");
+const Addtask = ({fetchTasks}) => {
+   const [title, setTitle] = useState("");
 
      const handleAddTask = async (e) => {
     e.preventDefault();
@@ -13,12 +13,12 @@ const Taskpage = () => {
 
   alert("Task added successfully!");
   setTitle("");
+  fetchTasks();
     }catch(err){
-       console.log(err.response?.data || err.message);
-  alert(err.response?.data?.message || "Error adding task!");
-      // alert("Error adding task!");
+  alert( "Task adding failed!");
+     
     }
-     }
+     };
 
   return (
     <div>
@@ -38,4 +38,4 @@ const Taskpage = () => {
   )
 }
 
-export default Taskpage
+export default Addtask
