@@ -15,7 +15,7 @@ const TaskList = ({fetchTasks,tasks}) => {
         }
     };
 
-     // update task
+     // update tasks
   const handleToggle = async (task) => {
 
     try {
