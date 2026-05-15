@@ -36,7 +36,8 @@ const Signup = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-    <br />
+    <br /><br />
+    
         <input
           type="email"
           placeholder="Enter email"
@@ -44,11 +45,12 @@ const Signup = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <br />
-    password:
+        <br /><br />
+
+ 
         <input
           type="password"
-          placeholder="Enter password"
+          placeholder="Enter password" 
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
